@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /fonts/carolmin-ps
+# catalog-date 2007-02-21 12:51:17 +0100
+# catalog-license lppl
+# catalog-version undef
 Name:		texlive-carolmin-ps
 Version:	20070221
 Release:	1
@@ -50,6 +56,7 @@ replacements for the MetaFont originals.
 %{_texmfdistdir}/fonts/type1/public/carolmin-ps/cminb17.pfb
 %{_texmfdistdir}/fonts/type1/public/carolmin-ps/cminb7.pfb
 %doc %{_texmfdistdir}/doc/fonts/carolmin-ps/README
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -60,3 +67,5 @@ replacements for the MetaFont originals.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
