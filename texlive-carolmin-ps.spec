@@ -17,7 +17,6 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
 
 %description
 The bundle offers Adobe Type 1 format versions of Peter
@@ -25,20 +24,12 @@ Wilson's Carolingian Minuscule font set (part of the bookhands
 collection). The fonts in the bundle are ready-to-use
 replacements for the MetaFont originals.
 
-%pre
-    %_texmf_mktexlsr_pre
-
 %post
-    %_texmf_mktexlsr_post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
-    fi
+    %{_sbindir}/texlive.post
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -57,7 +48,6 @@ replacements for the MetaFont originals.
 %{_texmfdistdir}/fonts/type1/public/carolmin-ps/cminb17.pfb
 %{_texmfdistdir}/fonts/type1/public/carolmin-ps/cminb7.pfb
 %doc %{_texmfdistdir}/doc/fonts/carolmin-ps/README
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -68,5 +58,3 @@ replacements for the MetaFont originals.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts doc %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
