@@ -58,3 +58,18 @@ replacements for the MetaFont originals.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts doc %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 20070221-2
++ Revision: 749976
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20070221-1
++ Revision: 718008
+- texlive-carolmin-ps
+- texlive-carolmin-ps
+- texlive-carolmin-ps
+- texlive-carolmin-ps
+- texlive-carolmin-ps
+
