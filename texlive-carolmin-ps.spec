@@ -5,8 +5,8 @@
 # catalog-license lppl
 # catalog-version undef
 Name:		texlive-carolmin-ps
-Version:	20070221
-Release:	10
+Version:	20170414
+Release:	1
 Summary:	Adobe Type 1 format of Carolingian Minuscule fonts
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/carolmin-ps
