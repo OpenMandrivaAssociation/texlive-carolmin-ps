@@ -3,7 +3,7 @@ Version:	15878
 Release:	2
 Summary:	Adobe Type 1 format of Carolingian Minuscule fonts
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/fonts/carolmin-ps
+URL:		https://www.ctan.org/tex-archive/fonts/carolmin-ps
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/carolmin-ps.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/carolmin-ps.doc.r%{version}.tar.xz
